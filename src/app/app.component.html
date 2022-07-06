@@ -8,7 +8,7 @@
 <div class="allDaysValue">
   <div class="sunday" *ngIf="getAllDayddat['sunday']['checked']">
     <h2>In Sunday</h2>
-    <button><h2>Select for all Days</h2></button>
+    <button (click)="selectForAllDays()" >Select for all Days</button>
     <button [disabled]="getAllDayddat['sunday']['data'].length > 1" (click)="addTimeInSunday()">Add Time</button>
     <div *ngFor="let v of getAllDayddat['sunday']['data']; let i=index">
       InTime<input type="date" (change)="updateInTimeChange(i , $event)" >

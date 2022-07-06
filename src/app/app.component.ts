@@ -95,4 +95,13 @@ export class AppComponent {
     console.log(this.getAllDayddat);
     
   }
+  selectForAllDays(){
+    this.getAllDayddat['monday']['data'] = this.getAllDayddat['sunday']['data'].slice()
+    this.getAllDayddat['tuesday']['data'] = this.getAllDayddat['sunday']['data'].slice()
+    this.getAllDayddat['wednesday']['data'] = this.getAllDayddat['sunday']['data'].slice()
+    this.getAllDayddat['thursday']['data'] = this.getAllDayddat['sunday']['data'].slice()
+    this.getAllDayddat['friday']['data'] = this.getAllDayddat['sunday']['data'].slice()
+    console.log(this.getAllDayddat);
+    
+  }
 }
