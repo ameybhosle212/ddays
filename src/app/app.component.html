@@ -11,8 +11,8 @@
     <button (click)="selectForAllDays()" >Select for all Days</button>
     <button [disabled]="getAllDayddat['sunday']['data'].length > 1" (click)="addTimeInSunday()">Add Time</button>
     <div *ngFor="let v of getAllDayddat['sunday']['data']; let i=index">
-      InTime<input type="date" (change)="updateInTimeChange(i , $event)" >
-      OutTime<input type="date" (change)="updateOutTimeChange(i , $event)" >
+      InTime<input type="date" (change)="updateInTimeChange(i , $event,'sunday')" >
+      OutTime<input type="date" (change)="updateOutTimeChange(i , $event,'sunday')" >
       <button (click)="deleteTimeFromdays(i,'sunday')">-</button>
     </div>
   </div>
@@ -20,8 +20,8 @@
     <h2>In Monday</h2>
     <button [disabled]="getAllDayddat['monday']['data'].length > 1" (click)="addTimeInDays('monday')">Add Time</button>
     <div *ngFor="let v of getAllDayddat['monday']['data']; let i=index">
-      InTime<input type="date" (change)="updateInTimeChange(i , $event)" >
-      OutTime<input type="date" (change)="updateOutTimeChange(i , $event)" >
+      InTime<input type="date" (change)="updateInTimeChange(i , $event,'monday')" >
+      OutTime<input type="date" (change)="updateOutTimeChange(i , $event,'monday')" >
       <button (click)="deleteTimeFromdays(i,'monday')">-</button>
     </div>
   </div>
@@ -29,8 +29,8 @@
     <h2>In tuesday</h2>
     <button [disabled]="getAllDayddat['tuesday']['data'].length > 1" (click)="addTimeInDays('tuesday')">Add Time</button>
     <div *ngFor="let v of getAllDayddat['tuesday']['data']; let i=index">
-      InTime<input type="date" (change)="updateInTimeChange(i , $event)" >
-      OutTime<input type="date" (change)="updateOutTimeChange(i , $event)" >
+      InTime<input type="date" (change)="updateInTimeChange(i , $event,'tuesday')" >
+      OutTime<input type="date" (change)="updateOutTimeChange(i , $event,'tuesday')" >
       <button (click)="deleteTimeFromdays(i,'tuesday')">-</button>
     </div>
   </div>
@@ -38,8 +38,8 @@
     <h2>In wednesday</h2>
     <button [disabled]="getAllDayddat['wednesday']['data'].length > 1" (click)="addTimeInDays('wednesday')">Add Time</button>
     <div *ngFor="let v of getAllDayddat['wednesday']['data']; let i=index">
-      InTime<input type="date" (change)="updateInTimeChange(i , $event)" >
-      OutTime<input type="date" (change)="updateOutTimeChange(i , $event)" >
+      InTime<input type="date" (change)="updateInTimeChange(i , $event,'wednesday')" >
+      OutTime<input type="date" (change)="updateOutTimeChange(i , $event,'wednesday')" >
       <button (click)="deleteTimeFromdays(i,'wednesday')">-</button>
     </div>
   </div>
@@ -47,8 +47,8 @@
     <h2>In thursday</h2>
     <button [disabled]="getAllDayddat['thursday']['data'].length > 1" (click)="addTimeInDays('thursday')">Add Time</button>
     <div *ngFor="let v of getAllDayddat['thursday']['data']; let i=index">
-      InTime<input type="date" (change)="updateInTimeChange(i , $event)" >
-      OutTime<input type="date" (change)="updateOutTimeChange(i , $event)" >
+      InTime<input type="date" (change)="updateInTimeChange(i , $event,'thursday')" >
+      OutTime<input type="date" (change)="updateOutTimeChange(i , $event,'thursday')" >
       <button (click)="deleteTimeFromdays(i,'thursday')">-</button>
     </div>
   </div>
@@ -56,8 +56,8 @@
     <h2>In friday</h2>
     <button [disabled]="getAllDayddat['friday']['data'].length > 1" (click)="addTimeInDays('friday')">Add Time</button>
     <div *ngFor="let v of getAllDayddat['friday']['data']; let i=index">
-      InTime<input type="date" (change)="updateInTimeChange(i , $event)" >
-      OutTime<input type="date" (change)="updateOutTimeChange(i , $event)" >
+      InTime<input type="date" (change)="updateInTimeChange(i , $event,'friday')" >
+      OutTime<input type="date" (change)="updateOutTimeChange(i , $event,'friday')" >
       <button (click)="deleteTimeFromdays(i,'friday')">-</button>
     </div>
   </div>

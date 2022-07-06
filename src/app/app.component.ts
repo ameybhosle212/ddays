@@ -77,15 +77,15 @@ export class AppComponent {
     
   }
 
-  updateInTimeChange(data:any, value1:any){
-    this.getAllDayddat['sunday']['data'][parseInt(data)]['inTime'] = value1.target.value;
-    console.log("INTIME ",this.getAllDayddat['sunday']['data']);
+  updateInTimeChange(data:any, value1:any,day:any){
+    this.getAllDayddat[day]['data'][parseInt(data)]['inTime'] = value1.target.value;
+    console.log("INTIME ",this.getAllDayddat[day]['data']);
     
   }
 
-  updateOutTimeChange(data:any, value1:any){
-    this.getAllDayddat['sunday']['data'][parseInt(data)]['outTime'] = value1.target.value;
-    console.log("OUTTIME ",this.getAllDayddat['sunday']['data']);
+  updateOutTimeChange(data:any, value1:any,day:any){
+    this.getAllDayddat[day]['data'][parseInt(data)]['outTime'] = value1.target.value;
+    console.log("OUTTIME ",this.getAllDayddat[day]['data']);
  }
 
   deleteTimeFromdays(data:any,day:any){
@@ -101,6 +101,7 @@ export class AppComponent {
     this.getAllDayddat['wednesday']['data'] = this.getAllDayddat['sunday']['data'].slice()
     this.getAllDayddat['thursday']['data'] = this.getAllDayddat['sunday']['data'].slice()
     this.getAllDayddat['friday']['data'] = this.getAllDayddat['sunday']['data'].slice()
+    this.getAllDayddat['saturday']['data'] = this.getAllDayddat['sunday']['data'].slice()
     console.log(this.getAllDayddat);
     
   }
