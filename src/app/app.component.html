@@ -8,8 +8,8 @@
 <div class="allDaysValue">
   <div class="sunday" *ngIf="getAllDayddat['sunday']['checked']">
     <h2>In Sunday</h2>
-    <button (click)="selectForAllDays()" >Select for all Days</button>
-    <button [disabled]="getAllDayddat['sunday']['data'].length > 1" (click)="addTimeInSunday()">Add Time</button>
+    <button *ngIf="sundayShowDayAll" (click)="selectForAllDays()" >Select for all Days</button>
+    <button [disabled]="getAllDayddat['sunday']['data'].length > 1" (click)="addTimeInDays('sunday')">Add Time</button>
     <div *ngFor="let v of getAllDayddat['sunday']['data']; let i=index">
       InTime<input type="date" (change)="updateInTimeChange(i , $event,'sunday')" >
       OutTime<input type="date" (change)="updateOutTimeChange(i , $event,'sunday')" >
@@ -18,6 +18,8 @@
   </div>
   <div class="monday" *ngIf="getAllDayddat['monday']['checked']">
     <h2>In Monday</h2>
+    <button (click)="selectForAllDays()" *ngIf="mondayShowDayAll" >Select for all Days</button>
+ 
     <button [disabled]="getAllDayddat['monday']['data'].length > 1" (click)="addTimeInDays('monday')">Add Time</button>
     <div *ngFor="let v of getAllDayddat['monday']['data']; let i=index">
       InTime<input type="date" (change)="updateInTimeChange(i , $event,'monday')" >
