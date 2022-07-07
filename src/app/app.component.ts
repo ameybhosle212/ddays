@@ -37,7 +37,7 @@ export class AppComponent {
       'data':[]
     }
   }
-
+  showSelect : boolean = false;
   sundayShowDayAll   :boolean=false;
   mondayShowDayAll   :boolean=false;
   tuesdayShowDayAll  :boolean=false;
@@ -61,7 +61,7 @@ export class AppComponent {
     }
     
     console.log(this.getAllDayddat[data]);
-
+    
     if(data=="sunday"){
       this.sundayShowDayAll=true;
       this.mondayShowDayAll=false;

@@ -18,7 +18,7 @@
   </div>
   <div class="monday" *ngIf="getAllDayddat['monday']['checked']">
     <h2>In Monday</h2>
-    <span *ngIf="mondayShowDayAll">   <button (click)="selectForAllDays()" >Select for all Days</button></span>
+    <button (click)="selectForAllDays()" *ngIf="mondayShowDayAll" >Select for all Days</button>
  
     <button [disabled]="getAllDayddat['monday']['data'].length > 1" (click)="addTimeInDays('monday')">Add Time</button>
     <div *ngFor="let v of getAllDayddat['monday']['data']; let i=index">
