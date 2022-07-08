@@ -37,7 +37,6 @@ export class AppComponent {
       'data':[]
     }
   }
-  showSelect : boolean = false;
   sundayShowDayAll   :boolean=false;
   mondayShowDayAll   :boolean=false;
   tuesdayShowDayAll  :boolean=false;
@@ -45,6 +44,8 @@ export class AppComponent {
   thursdayShowDayAll :boolean=false;
   fridayShowDayAll   :boolean=false;
   saturdayShowDayAll :boolean=false;
+
+  ShowDayOpenOrNot :boolean=false;
   
   updatedMonth(data:string){
     console.log(this.getAllDayddat[data]);
@@ -61,27 +62,52 @@ export class AppComponent {
     }
     
     console.log(this.getAllDayddat[data]);
-    
-    if(data=="sunday"){
-      this.sundayShowDayAll=true;
-      this.mondayShowDayAll=false;
-      this.tuesdayShowDayAll=false;
-      this.wednesdayShowDayAll=false;
-      this.fridayShowDayAll=false;  
-      this.saturdayShowDayAll=false;   
-    }
-    if(data=="monday"){
-      this.mondayShowDayAll=true;
-      this.tuesdayShowDayAll=false;
-      this.wednesdayShowDayAll=false;
-      this.fridayShowDayAll=false;  
-      this.saturdayShowDayAll=false;
-      this.sundayShowDayAll=false;
-    }
-    else{
-      return
-    }
-    
+
+
+  if(data=="sunday" && this.ShowDayOpenOrNot ==false) { 
+    this.sundayShowDayAll=true;
+    this.mondayShowDayAll=false;
+    this.tuesdayShowDayAll=false;
+    this.wednesdayShowDayAll=false;
+    this.thursdayShowDayAll=false;
+    this.fridayShowDayAll=false;  
+    this.saturdayShowDayAll=false; 
+    this.ShowDayOpenOrNot =true;
+  }
+  
+  if(data=="monday" && this.ShowDayOpenOrNot ==false){
+    this.mondayShowDayAll=true;
+    this.tuesdayShowDayAll=false;
+    this.wednesdayShowDayAll=false;
+    this.thursdayShowDayAll=false;
+    this.fridayShowDayAll=false;  
+    this.saturdayShowDayAll=false;
+    this.sundayShowDayAll=false;
+    this.ShowDayOpenOrNot =true;
+  }
+  if(data=="tuesday" && this.ShowDayOpenOrNot ==false){
+    this.tuesdayShowDayAll=true;
+    this.mondayShowDayAll=false;
+    this.wednesdayShowDayAll=false;
+    this.thursdayShowDayAll=false;
+    this.fridayShowDayAll=false;  
+    this.saturdayShowDayAll=false;
+    this.sundayShowDayAll=false;
+    this.ShowDayOpenOrNot =true;
+  }
+  if(data=="wednesday" && this.ShowDayOpenOrNot ==false){
+    this.wednesdayShowDayAll=true;
+    this.mondayShowDayAll=false;
+    this.tuesdayShowDayAll=false;
+    this.thursdayShowDayAll=false;
+    this.fridayShowDayAll=false;  
+    this.saturdayShowDayAll=false;
+    this.sundayShowDayAll=false;
+    this.ShowDayOpenOrNot =true;
+  }
+  else{
+    return
+  }
   }
  
 
@@ -123,13 +149,13 @@ export class AppComponent {
       this.getAllDayddat['saturday']['data'] = this.getAllDayddat ['monday']['data'].slice()
       console.log(this.getAllDayddat);
     }
-    this.getAllDayddat['monday']['data'] = this.getAllDayddat['sunday']['data'].slice()
-    this.getAllDayddat['tuesday']['data'] = this.getAllDayddat['sunday']['data'].slice()
-    this.getAllDayddat['wednesday']['data'] = this.getAllDayddat['sunday']['data'].slice()
-    this.getAllDayddat['thursday']['data'] = this.getAllDayddat['sunday']['data'].slice()
-    this.getAllDayddat['friday']['data'] = this.getAllDayddat['sunday']['data'].slice()
-    this.getAllDayddat['saturday']['data'] = this.getAllDayddat['sunday']['data'].slice()
-    console.log(this.getAllDayddat);
+ // this.getAllDayddat['monday']['data'] = this.getAllDayddat['sunday']['data'].slice()
+ // this.getAllDayddat['tuesday']['data'] = this.getAllDayddat['sunday']['data'].slice()
+ // this.getAllDayddat['wednesday']['data'] = this.getAllDayddat['sunday']['data'].slice()
+ // this.getAllDayddat['thursday']['data'] = this.getAllDayddat['sunday']['data'].slice()
+ // this.getAllDayddat['friday']['data'] = this.getAllDayddat['sunday']['data'].slice()
+ // this.getAllDayddat['saturday']['data'] = this.getAllDayddat['sunday']['data'].slice()
+ // console.log(this.getAllDayddat);
     
   }
 }
